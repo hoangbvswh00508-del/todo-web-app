@@ -22,3 +22,28 @@ function inMauSo() {
     }
 }
 inMauSo();
+//get input to users to add their tasks
+const inputField = document.gerElementById('todo-input');
+//create add button 
+const addButton = document.getElementById('add-button');
+//get list <ul> to put head on
+const todolist = document.getElementById('todo-list');
+//Check get result
+console.log("InPut Element: ", inputField);
+console.log("Button Element: ", addButton);
+
+// the function will be call when the add button appear
+function handleAddToDo() {
+// get value from input
+    const todoText = inputField.value;
+// check value input
+    if (todotext.trim() !== "") {
+        console.log("My Task Need: " + todoText);
+        // delete input value after submit
+        inputField.value = '';
+    } else {
+        console.log("Please Input The Task!!!");
+    }
+}
+
+addButton.addEventListener('click', handleAddTodo);
